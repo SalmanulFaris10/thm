@@ -7,7 +7,37 @@
     function page_scripts(){?>
         <script>
             $(document).ready(function () {
- 
+                var ExpertiseAreaList = document.getElementsByClassName("expertise-area-list")[0].getElementsByTagName("ul")[0];
+                totalChildCount = ExpertiseAreaList.childElementCount;
+                rows=totalChildCount/2;
+                ExpertiseAreaList.style.gridTemplateRows="repeat("+rows+", 1fr)";
+
+
+                var sectors = document.getElementsByClassName("sectors")[0];
+                sectorsBox = sectors.getElementsByClassName("box");
+                var flag=1,i=0;
+                for(i=i;i<=sectorsBox.length;i=i){
+                    for(j=1;j<=4;j++,i++){
+                        if(flag%2==1){
+                            if(j%2==0){
+                                sectorsBox[i].style.background = "#fff";
+                                sectorsBox[i].getElementsByTagName("h3")[0].style.color = "#000";
+                            }else{
+                                sectorsBox[i].style.background = "#2E3192";
+                                sectorsBox[i].getElementsByTagName("h3")[0].style.color = "#fff";
+                            }
+                        }else{
+                            if(j%2==0){
+                                sectorsBox[i].style.background="#2E3192";
+                                sectorsBox[i].getElementsByTagName("h3")[0].style.color = "#fff";
+                            }else{
+                                sectorsBox[i].style.background="#fff";
+                                sectorsBox[i].getElementsByTagName("h3")[0].style.color = "#000";
+                            }
+                        }
+                    }
+                    flag++;
+                }
             });
         </script>
 	<?php
@@ -84,7 +114,7 @@
     </section>
     <section class="sectors">
         <div class="container">
-            <h2>Our expertise spans a wide range of sectors including:</h2>
+            <h2>Our expertise spans a wide range of<br /> sectors including:</h2>
             <div class="outer">
                 <div class="box">
                     <div class="content">
@@ -155,6 +185,5 @@
     </section>
 </div>
 
-<section></section>
 
 <?php get_footer(); ?>

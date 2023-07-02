@@ -1068,7 +1068,7 @@ footer{
 	  stroke-dashoffset: 0;
 	}
 }
-
+//End about page
 
 //expertise-page
 .expertise-page{
@@ -1082,7 +1082,6 @@ footer{
 			width: calc(50% - 30px);
 			h2{
 				@include font(40px,40,20px,20,50px,50,30px,30,500);
-				text-align: center;
 				margin-bottom: 30px;
 			}
 			.expertise-area-list{
@@ -1097,6 +1096,8 @@ footer{
 						@include font-and-color(24px,24,16px,16,24px,24,16px,16,500,#000);
 						margin: 0 0 36px 20px;
 						position: relative;
+						display: flex;
+						align-items: center;
 						&::before{
 							content: "";
 							position: absolute;
@@ -1116,16 +1117,50 @@ footer{
 			width: calc(50% - 30px);
 		}
 	}
+
 	.images{
 		margin-top: 106px;
-		@include display-flex-space-between();
+		.outer {
+			@include display-flex-space-between();
+		}
+		
 		.img{
 			width: auto;
+			&:first-child,&:nth-child(3){
+				width: 24%;
+			}
+			&:nth-child(2){
+				width: 49%;
+			}
+		}
+	}
+
+	.sectors{
+		margin-top: 84px;
+		h2{
+			@include font(40px,40,20px,20,50px,50,30px,30,500);
+			margin-bottom: 30px;
+			text-align: center
+		}
+		.outer{
+			@include display-flex-space-between();
+			gap: 20px;
+		}
+		.box{
+			width: calc(25% - 20px);
+			@include display-flex-center();
+			height: 325px;
+			text-align: center;
+			.content{
+				.icon{
+					margin-bottom: 20px;
+				}
+				h3{
+					@include font(30px,30,16px,16,30px,30,16px,16,500);
+				}
+			}
 		}
 	}
 }
 //End expertise-page
-.expertise{
-	background-color: #000;
-}
-//End about page
+  

@@ -2577,7 +2577,6 @@ footer .bottom p {
   font-size: calc(20px + 20 * (100vw - 320px) / 1280);
   line-height: calc(30px + 20 * (100vw - 320px) / 1280);
   font-weight: 500;
-  text-align: center;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1600px) {
@@ -2601,6 +2600,8 @@ footer .bottom p {
   color: #000;
   margin: 0 0 36px 20px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 1600px) {
   .expertise-page .expertise-areas .content .expertise-area-list ul li {
@@ -2624,6 +2625,8 @@ footer .bottom p {
 }
 .expertise-page .images {
   margin-top: 106px;
+}
+.expertise-page .images .outer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2631,6 +2634,58 @@ footer .bottom p {
 }
 .expertise-page .images .img {
   width: auto;
+}
+.expertise-page .images .img:first-child, .expertise-page .images .img:nth-child(3) {
+  width: 24%;
+}
+.expertise-page .images .img:nth-child(2) {
+  width: 49%;
+}
+.expertise-page .sectors {
+  margin-top: 84px;
+}
+.expertise-page .sectors h2 {
+  font-size: calc(20px + 20 * (100vw - 320px) / 1280);
+  line-height: calc(30px + 20 * (100vw - 320px) / 1280);
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 1600px) {
+  .expertise-page .sectors h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+.expertise-page .sectors .outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.expertise-page .sectors .box {
+  width: calc(25% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 325px;
+  text-align: center;
+}
+.expertise-page .sectors .box .content .icon {
+  margin-bottom: 20px;
+}
+.expertise-page .sectors .box .content h3 {
+  font-size: calc(16px + 14 * (100vw - 320px) / 1280);
+  line-height: calc(16px + 14 * (100vw - 320px) / 1280);
+  font-weight: 500;
+}
+@media screen and (min-width: 1600px) {
+  .expertise-page .sectors .box .content h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 @media screen and (max-width: 1400px) {

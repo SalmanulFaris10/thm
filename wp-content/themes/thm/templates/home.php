@@ -33,11 +33,6 @@
     }
 ?>
 
-
-
-
-
-
 <div class="home-page">
     <!-- banner -->
     <section class="banner">
