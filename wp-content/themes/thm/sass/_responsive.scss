@@ -2,6 +2,17 @@
    .container{
         padding: 0 100px;
    }
+
+   .expertise-page .expertise-areas .content .expertise-area-list ul li{margin-bottom: 14px;}
+   .expertise-page .images{margin-top: 50px;}
+
+   .about-page .founder .details{padding: 30px;}
+
+   .home-page .about .content-box{width: 50%;}
+   .home-page .about .content-box h2,.home-page .about .content-box .right{width: 100%;}
+   .home-page .about .content-box .outer{gap: 20px;}
+
+   .home-page .what-we-do .items .item .content{width: 36%;}
 }
 
 @media screen and (max-width:1430px){
@@ -10,7 +21,13 @@
             width: auto;
             margin-bottom: 40px;
         }
-    } 
+    }
+
+    .contact-page .contact-details{gap: 21px;justify-content: center;}
+    .contact-page .contact-details .details{width: calc(50% - 21px);}
+
+    .our-work-page .works .outer{gap: 30px;}
+    .our-work-page .works a{width: calc(33.33% - 30px);}
 }
 
 @media screen and (max-width:1240px){
@@ -20,6 +37,10 @@
             width: auto;
         }
     }
+
+    .about-page .who-we-are .left,.about-page .who-we-are .right{width: 100%;}
+
+    .home-page .expertise .box{padding: 30px;}
 }
 
 
@@ -27,19 +48,63 @@
     .container{
         padding: 0 80px;
     }
+    .contact-page .contact-form .form form .field{width: 100%;}
+    .contact-page .contact-form .form{padding: fluid-padding(50px,30px);}
+
+    .expertise-page .sectors .box{width: calc(33.33% - 20px);}
+    .expertise-page .sectors .outer:nth-child(5){
+        order: 6;
+    }
+
+    .home-page .get-in-touch .content{width: 80%;bottom: -125px;}
 }
 
+
+@media screen and (max-width:960px){
+    .our-work-page .works .outer{gap: 20px;}
+    .our-work-page .works a{width: calc(50% - 20px);}
+
+    .expertise-page .expertise-areas .content{margin-bottom: 20px;}
+    .expertise-page .expertise-areas .content,.expertise-page .expertise-areas .img,.expertise-page .expertise-areas .img img{width: 100%;}
+    
+    .about-page .founder{height: auto;}
+    .about-page .founder .img,.about-page .founder .details{width: 100%;}
+
+    header .outer .right .header-menu{display: none;}
+
+    .home-page .what-we-do .items .item .content{width: 50%;}
+    .home-page .what-we-do .items .item .img{width: 47%;}
+}
 
 @media screen and (max-width:860px){
     .container{
         padding: 0 50px;
     }
+    .contact-page .contact-details .details{width: 100%;}
+
+    .expertise-page .sectors .box{width: calc(50% - 20px);}
+
+    .home-page .about .content-box{position: initial;width: 100%;}
 }
+
 
 @media screen and (max-width:780px){
     .expertise .box .items a{
         width: 100%;
     }
+}
+
+
+@media screen and (max-width:760px){
+    .container{
+        padding: 0 50px;
+    }
+    .contact-page .contact-form .img,.contact-page .contact-form .form{width: 100%;}
+
+    .home-page .what-we-do .items .item .content,.home-page .what-we-do .items .item .img{width: 100%;}
+
+    .home-page .expertise .box .items{justify-content: center;}
+    .home-page .expertise .box .items a{width: 33%;}
 }
 
 
@@ -54,8 +119,32 @@
     }
 }
 
+@media screen and (max-width:660px){
+    .our-work-page .first-sec .boxes{
+        gap: 20px;
+    }
+    .our-work-page .first-sec .boxes .box{
+        width: calc(50% - 20px);
+    }
+    .our-work-page .works a{width: 100%;}
+    .our-work-page .works a .work-box .img img{width: 100%;}
 
+    .expertise-page .expertise-areas .content .expertise-area-list ul{display: block;}
 
+    .home-page .get-in-touch .content{padding: 40px;bottom: 0;}
+}
 
+@media screen and (max-width:560px){
+    .expertise-page .sectors .box{
+        width: 100%;
+    }
 
+    .home-page .expertise .box .items a{width: 100%;}
+}
 
+@media screen and (max-width:440px){
+    .our-work-page .first-sec .boxes .box{
+        width: 100%;
+    }
+    header .outer .logo{width: 65%;}
+}

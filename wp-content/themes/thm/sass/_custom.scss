@@ -534,7 +534,7 @@ footer{
 			}
 		}
 	}
-}
+
 
 
 @mixin text-color-fill{
@@ -896,6 +896,7 @@ footer{
 		}
 	}
 }
+}
 //End home page
 
 
@@ -909,6 +910,7 @@ footer{
 		z-index: 1;
 		text-align: center;
 		left: 50%;
+		max-width: 670px;
 		.top{
 			h1{
 				@include font-and-color(60px,60,22px,22,65px,65,27px,27,700,#fff);
@@ -962,7 +964,7 @@ footer{
 					position: absolute;
 					content: "";
 					background: url(../images/breadcumbs-arrow.png) no-repeat center;
-					top: 50%;
+					top: 59%;
 					width: 6px;
 					height: 10px;
 					right: 20px;
@@ -1000,8 +1002,7 @@ footer{
 			margin-bottom: 7px;
 		}
 		.left{
-			width: 25%;
-			@include display-flex-center();
+			width: 28%;
 			h2{
 				@include font-and-color(50px,50,18px,18,65px,65,33px,33,700,$primary_color);
 			}
@@ -1198,6 +1199,7 @@ footer{
 		.outer{
 			@include display-flex-space-between();
 			gap: 50px;
+			align-items: stretch;
 		}
 		a{
 			width: calc(33.33% - 50px);
@@ -1205,7 +1207,7 @@ footer{
 				padding: fluid-padding(23px,15px) fluid-padding(20px,15px) fluid-padding(40px,15px) fluid-padding(40px,15px);
 				h3{
 					text-transform: uppercase;
-					@include font-and-color(26px,26,16px,16,50px,50,40px,40,800,$primary_color);
+					@include font-and-color(26px,26,16px,16,26px,26,16px,16,800,$primary_color);
 					margin-bottom: 1px;
 				}
 				p{
@@ -1297,7 +1299,93 @@ footer{
 		}
 		p{
 			@include font-and-color(16px,16,12px,12,30px,30,26px,26,400,#C7C9C8);
+			margin-bottom: 9px;
 		}
 	}
 }
 // End work detail page
+
+//contact page
+.contact-page{
+	background-color: #F8F8F8;
+	padding: fluid-padding(85px,30px) 0 fluid-padding(117px,30px) 0;
+	.contact-form{
+		display: flex;
+		flex-wrap: wrap;
+		.img{
+			width: 34%;
+		}
+		.form{
+			width: 66%;
+			background-color: #fff;
+			padding: fluid-padding(82px,20px) fluid-padding(95px,20px) fluid-padding(102px,20px) fluid-padding(95px,20px);
+			h2{
+				@include font-and-color(40px,40,20px,20,50px,50,25px,25,600,#1E1E1E);
+				margin-bottom: 17px;
+			}
+			form{
+				.field-sets{
+					@include display-flex-space-between();
+				}
+				.field{
+					width: calc(50% - 10px);
+					margin-bottom: 10px;
+					label{
+						@include font-and-color(18px,18,12px,12,33px,33,25px,25,500,#585252);
+						margin-bottom: 8px;
+						display: block
+					}
+					textarea,input{
+						@include font-and-color(18px,18,12px,12,33px,33,25px,25,500,#585252);
+						border: 1px solid #D9D9D9;							
+					}
+					input{
+						height: 50px;
+						width: 100%;
+					}
+				}
+				input[type=submit]{
+					text-transform: uppercase;
+					background-color: $primary_color;
+					@include font-and-color(14px,14,10px,10,14px,14,10px,10,500,#fff);
+					padding: fluid-padding(19px,10px) fluid-padding(25px,15px);
+					margin-top: 25px;
+				}
+				.textarea{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.contact-details{
+		margin-top: 93px;
+		@include display-flex-space-between();
+		.details{
+			width: calc(33.33333333% - 21px);
+			display: flex;
+			flex-wrap: wrap;
+			.icon{
+				width: 26%;
+				@include display-flex-center();
+				background-color: $primary_color;
+				padding:fluid-padding(77px,30px) 0;
+				height: 203px;
+			}
+			.content{
+				width: 74%;
+				padding: fluid-padding(30px,15px) ;
+				background-color: #fff;
+				word-break: break-all;
+				h4{
+					@include font-and-color(18px,18,12px,12,33px,33,25px,25,500,#ACACAC);
+					margin-bottom: 12px;
+				}
+				a{
+					display: block;
+					@include font-and-color(18px,18,12px,12,30px,30,22px,22,500,#585252);
+				}
+			}
+		}
+	}
+}
+//End contact page

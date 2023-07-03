@@ -16,6 +16,7 @@
                     speed:1000,
                     autoplay: false,
                     autoplaySpeed: 6000,
+                    
                 });
                 $('.projects').slick({
                     infinite: true,
@@ -26,6 +27,26 @@
                     speed:1000,
                     autoplay: true,
                     autoplaySpeed: 2000,
+                    responsive: [
+                        {
+                        breakpoint: 10804,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                        },
+                        {
+                        breakpoint: 890,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                        }
+                    ]
                 });
             });
         </script>
@@ -284,7 +305,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="our-projects animation">        
