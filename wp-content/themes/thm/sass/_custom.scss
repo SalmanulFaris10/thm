@@ -710,7 +710,10 @@ footer{
 		z-index: 1;
 		.item{
 			margin-bottom: 50px;
-			@include display-flex-space-between();
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 115px;
 			.img{
 				width: 58%;
 			}

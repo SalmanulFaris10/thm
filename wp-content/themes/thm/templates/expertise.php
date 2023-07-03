@@ -55,13 +55,12 @@
     </div>
 </div>
 <div class="bread-crumbs">
-<div class="container">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Areas of Expertise</a> </li>        
-    </ul>
-</div>
-
+    <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Areas of Expertise</a> </li>        
+        </ul>
+    </div>
 </div>
 <div class="expertise-page">
     <section class="expertise-areas">
@@ -129,7 +128,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Healthcare.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Healthcare</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -137,7 +136,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Education.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Education</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -145,7 +144,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Leisure.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Leisure</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -153,7 +152,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Hospitality.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Hospitality</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -161,7 +160,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Industrial.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Industrial</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -169,7 +168,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Public.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Public</h3>
                     </div>
                 </div>
                 <div class="box">
@@ -177,7 +176,7 @@
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/expertise/Retail.svg" alt="">
                         </div>
-                        <h3>Commercial</h3>
+                        <h3>Retail</h3>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@
                     dots: true,
                     arrows: false,
                     speed:1000,
-                    autoplay: false,
+                    autoplay: true,
                     autoplaySpeed: 6000,
                     
                 });
@@ -29,7 +29,7 @@
                     autoplaySpeed: 2000,
                     responsive: [
                         {
-                        breakpoint: 10804,
+                        breakpoint: 1080,
                         settings: {
                             slidesToShow: 3,
                         }
@@ -71,8 +71,8 @@
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
                 <div class="buttons">
-                    <a data-front="See our works" data-back="See our works" href="#"></a>
-                    <a href="#">get in touch <span></span></a>
+                    <a data-front="See our works" data-back="See our works" href="https://thm.hereisthedemo.com/our-work/"></a>
+                    <a href="https://thm.hereisthedemo.com/contact-us/">get in touch <span></span></a>
                 </div>
             </div>
         </div>
@@ -90,8 +90,8 @@
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
                 <div class="buttons">
-                    <a data-front="See our works" data-back="See our works"  href="#"></a>
-                    <a href="#">get in touch<span></span></a>
+                    <a data-front="See our works" data-back="See our works"  href="https://thm.hereisthedemo.com/our-work/"></a>
+                    <a href="https://thm.hereisthedemo.com/contact-us/">get in touch<span></span></a>
                 </div>
             </div>
         </div>
@@ -109,8 +109,8 @@
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
                 <div class="buttons">
-                    <a data-front="See our works" data-back="See our works"  href="#"></a>
-                    <a href="#">get in touch<span></span></a>
+                    <a data-front="See our works" data-back="See our works"  href="https://thm.hereisthedemo.com/our-work/"></a>
+                    <a href="https://thm.hereisthedemo.com/contact-us/">get in touch<span></span></a>
                 </div>
             </div>
         </div>
@@ -128,8 +128,8 @@
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
                 <div class="buttons">
-                    <a data-front="See our works" data-back="See our works"  href="#"></a>
-                    <a href="#">get in touch<span></span></a>
+                    <a data-front="See our works" data-back="See our works"  href="https://thm.hereisthedemo.com/our-work/"></a>
+                    <a href="https://thm.hereisthedemo.com/contact-us/">get in touch<span></span></a>
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@
                                 </p>
                             </div>
                             <div class="button">
-                                <a href="#">Know more
+                                <a href="https://thm.hereisthedemo.com/about-us/">Know more
                                     <div class="plus">
                                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home/plus.png" alt="">
                                     </div>  
@@ -174,7 +174,7 @@
             <p>Our reputation has been built on our commitment to deliver our services to the highest 
                 possible standards.</p>
             <div class="button">
-                <a href="#">Get in touch</a>
+                <a href="https://thm.hereisthedemo.com/contact-us/">Get in touch</a>
             </div>
         </div>
     </section>
@@ -197,7 +197,7 @@
                             </p>
                         </div>
                         <div class="button">
-                            <a href="#">Know more
+                            <a href="https://thm.hereisthedemo.com/areas-of-expertise/">Know more
                                 <div class="plus">
                                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home/plus.png" alt="">
                                 </div>  
@@ -219,7 +219,7 @@
                             </p>
                         </div>
                         <div class="button">
-                            <a href="#">Know more
+                            <a href="https://thm.hereisthedemo.com/areas-of-expertise/">Know more
                                 <div class="plus">
                                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home/plus.png" alt="">
                                 </div>  
