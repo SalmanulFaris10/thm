@@ -77,7 +77,7 @@
                 <a href="#" title="Click to know more">
                     <div class="work-box">
                         <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/abbive.png" alt="">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/abbvie.png" alt="">
                         </div>
                         <div class="content">
                             <h3>Abbvie</h3>
