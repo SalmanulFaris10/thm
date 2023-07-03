@@ -1217,3 +1217,87 @@ footer{
 }
 //End our work page
   
+
+// work detail page
+.work-detail-page{
+	background-color: #F8F8F8;
+	padding: fluid-padding(80px,30px) 0 fluid-padding(117px,30px) 0;
+	.slider-sec{
+		.outer{
+			display: flex;
+			flex-wrap: wrap;
+		}	
+		.img-slider{
+			width: 59%;
+		}
+		.content{
+			width: 34%;
+			background-color: #FFF;
+			height: fit-content;
+			padding: fluid-padding(55px,10px) fluid-padding(70px,10px);
+			h2{
+				@include font-and-color(35px,35,18px,18,50px,50,37px,37,800,$primary_color);
+				margin-bottom: 6px;
+				text-transform: uppercase;
+			}
+			.points{
+				padding-bottom: 15px;
+				border-bottom: 1px solid rgba(0, 0, 0, .2);
+			}
+			p{
+				@include font-and-color(16px,16,12px,12,25px,25,21px,21,400,#585252);
+				margin: 8px 0 10px 0;
+			}
+			p
+			&:first-child p{
+				margin-top: 0;
+			}
+		}
+		.small-box{
+			width: 7%;
+			background-color: $primary_color;
+			height: 93px;
+		}
+		ul.slick-dots{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: 6%;
+			left: 16%;
+			list-style: none;
+			gap: 15px;
+			transform: translate(-50%,-50%);
+			li{
+				button{
+					border-radius: 0;
+					width: 15px;
+					height: 15px;
+					font-size: 0;
+					background: none;
+					border: 0;
+					background-color: rgba(255, 255, 255, .3);
+				}
+			}
+			li.slick-active{				
+				button{
+					background-color: $second_color;
+					transition: 1s ease-in-out;
+				}
+			}
+		}
+	}
+	.challenges-and-solution{
+		background-color: $primary_color;
+		margin-top: 73px;
+		padding: fluid-padding(72px,30px) fluid-padding(95px,30px);
+		h3{
+			@include font-and-color (30px,30,16px,16,50px,50,26px,26,700,#FFF);
+			margin-bottom: 6px;
+		}
+		p{
+			@include font-and-color(16px,16,12px,12,30px,30,26px,26,400,#C7C9C8);
+		}
+	}
+}
+// End work detail page
