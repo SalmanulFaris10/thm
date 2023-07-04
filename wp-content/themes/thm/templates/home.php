@@ -14,7 +14,7 @@
                     dots: true,
                     arrows: false,
                     speed:1000,
-                    autoplay: true,
+                    autoplay: false,
                     autoplaySpeed: 6000,
                     
                 });
