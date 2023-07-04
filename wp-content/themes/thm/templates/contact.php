@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="field textarea">
-                        <label for="message">Massage</label>
+                        <label for="message">Message</label>
                         <textarea name="message" rows="4"></textarea>
                     </div>
                     <input type="submit" id="submit" value="Send message">
@@ -91,7 +91,7 @@
                 <div class="content">
                     <h4>Phone</h4>
                     <a href="tel:01 6276270">01 6276270</a>
-                    <a href="tel:087692 4420">087692 4420</a>
+                    <a href="tel:087 692 4420">087 692 4420</a>
                 </div>
             </div>
             <div class="details">
