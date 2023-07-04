@@ -74,7 +74,7 @@
         <section class="works">
             <h2>See our works</h2>
             <div class="outer">
-                <a href="#" title="Click to know more">
+                <a href="https://thm.hereisthedemo.com/work-detail/" title="Click to know more">
                     <div class="work-box">
                         <div class="img">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/abbvie.png" alt="">
@@ -102,7 +102,7 @@
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/energia.png" alt="">
                         </div>
                         <div class="content">
-                            <h3>energia</h3>
+                            <h3>Exchange</h3>
                             <p>The above was carried out in a live hospital environment.</p>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/georges-dock-pgim.png" alt="">
                         </div>
                         <div class="content">
-                            <h3>georges dock pgim</h3>
+                            <h3>Stauntons pgim</h3>
                             <p>The above was carried out in a live hospital environment.</p>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/aib(adeladee-rid).png" alt="">
                         </div>
                         <div class="content">
-                            <h3>aib(adeladee rid)</h3>
+                            <h3>aib(Adelaide Road)</h3>
                             <p>The above was carried out in a live hospital environment.</p>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/linkedin-wilton-place.png" alt="">
                     </div>
                     <div class="content">
-                        <h3>linkedin wilton place</h3>
+                        <h3>LinkedIn Wilton Place</h3>
                         <p>The above was carried out in a live hospital environment.</p>
                     </div>
                 </div>

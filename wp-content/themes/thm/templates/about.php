@@ -112,7 +112,7 @@
                     each day at ThermoHeat.
                 </p>
                 <div class="sign">
-                    <svg viewBox="0 0 265 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="50%" viewBox="0 0 265 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="autograph__path" d="M22.5 1L19.5 5.5L18.5 7.5M18.5 7.5L15 14L13.3261 17.5M18.5 7.5L13.5 8.5L1 11L4.5 10H9.5L11 11.5L12 14L13.3261 17.5M5.21429 34.5L9.5 25.5L10.4565 23.5L13.3261 17.5M5.21429 34.5L4.5 36L1.5 45L5.21429 34.5ZM26 7.5H19.5L28 7L33.5 6.5H38.5H40.5H41" stroke="white"/>
                         <path class="autograph__path" d="M22 23L18.5 28.5L16 33L15.5 37L17.5 38L21.5 35L24 31.5L25 27L24.5 24L22 23ZM22 23L23.5 19.5L25.5 18L28.5 17L31.5 16H35V18L34 21.5L33 25L31.5 28.5L30 31.5L29.5 35V36.5L31.5 33L34 30L36 27L38 24L40 22L42 21V25.5L40.5 30.5V33.5L43 33L50.5 25.5L53 24.5L53.5 30" stroke="white" stroke-opacity="0.87"/>
                         <path class="autograph__path" d="M53.5 30.5L55 32H58L66 28" stroke="white" stroke-opacity="0.87"/>
