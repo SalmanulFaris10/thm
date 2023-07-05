@@ -61,12 +61,13 @@
             <div class="outer">
                 <div class="content">
                     <h2>
-                        <span class="animation-bar"></span>                  
+                        <!-- <span class="animation-bar"></span>                  
                         <span>We Provide Commercial</span>
                         <span class="animation-bar"></span> 
                         <span> Maintainance & Installation </span>
                         <span class="animation-bar"></span> 
-                        <span>Solutions</span>
+                        <span>Solutions</span> -->
+                        We Provide Commercial Maintainance & Installation Solutions
                     </h2>
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
@@ -80,12 +81,13 @@
             <div class="outer">
                 <div class="content">
                     <h2>
-                        <span class="animation-bar"></span>                  
+                        <!-- <span class="animation-bar"></span>                  
                         <span>We Provide Commercial</span>
                         <span class="animation-bar"></span> 
                         <span> Maintainance & Installation </span>
                         <span class="animation-bar"></span> 
-                        <span>Solutions</span>
+                        <span>Solutions</span> -->
+                        We Provide Commercial Maintainance & Installation Solutions
                     </h2>
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
@@ -99,12 +101,13 @@
             <div class="outer">
                 <div class="content">
                     <h2>
-                        <span class="animation-bar"></span>                  
+                        <!-- <span class="animation-bar"></span>                  
                         <span>We Provide Commercial</span>
                         <span class="animation-bar"></span> 
                         <span> Maintainance & Installation </span>
                         <span class="animation-bar"></span> 
-                        <span>Solutions</span>
+                        <span>Solutions</span> -->
+                        We Provide Commercial Maintainance & Installation Solutions
                     </h2>
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
@@ -118,12 +121,13 @@
             <div class="outer">
                 <div class="content">
                     <h2>
-                        <span class="animation-bar"></span>                  
+                        <!-- <span class="animation-bar"></span>                  
                         <span>We Provide Commercial</span>
                         <span class="animation-bar"></span> 
                         <span> Maintainance & Installation </span>
                         <span class="animation-bar"></span>
-                        <span>Solutions</span>
+                        <span>Solutions</span> -->
+                        We Provide Commercial Maintainance & Installation Solutions
                     </h2>
                     <p>We provide our clients with high quality services and unrivalled expertise</p>
                 </div>
@@ -355,7 +359,7 @@
     </section>
 
 
-    <section class="ou-approach">
+    <section class="ou-approach animation">
         <div class="container">
             <div class="outer">
                 <div class="left">
