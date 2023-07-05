@@ -55,6 +55,7 @@
 
 <?php if(!is_front_page()){?>
 	<?php if(have_rows('banner')){while(have_rows('banner')){the_row()?>
+		<?php $variable=get_sub_field('banner_image');if(($variable)){?>
 		<div class="inner_banner" 
 		style="background:<?php if($variable=get_sub_field('banner_image')){?>url('<?php echo $variable?>') no-repeat center<?php }?>">
 			<div class="content">
@@ -81,5 +82,5 @@
 				</ul>
 			</div>
 		</div>
-	<?php }}?>
+	<?php }}}?>
 <?php }?>

@@ -2786,6 +2786,9 @@ footer .bottom p {
 .work-detail-page .slider-sec .img-slider {
   width: 59%;
 }
+.work-detail-page .slider-sec .img-slider img {
+  width: 100%;
+}
 .work-detail-page .slider-sec .content {
   width: 34%;
   background-color: #FFF;

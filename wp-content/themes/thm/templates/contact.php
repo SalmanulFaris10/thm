@@ -13,33 +13,20 @@
 	<?php
     }
 ?>
-<div class="inner_banner" style="background:url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact/thermo-heat-contact.png') no-repeat center">
-    <div class="content">
-        <div class="top">
-            <h1>Contact Us</h1>
-            <p>Get in touch and let's discuss how we can help solve your heating, plumbing, ventilation and air-conditioning requirements</p>
-        </div>
-        <div class="bottom">
-            <p>Certified Company ISO 9001-2008</p>
-        </div>
-    </div>
-</div>
-<div class="bread-crumbs">
-    <div class="container">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact Us</a> </li>        
-        </ul>
-    </div>
-</div>
+
 <div class="contact-page">
     <div class="container">
         <section class="contact-form">
             <div class="img">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact/termo-heat.png" alt="">
+                <?php if($variable=get_field('image')){?>
+                    <img src="<?php echo $variable?>" alt="">
+                <?php }?>
+                
             </div>
             <div class="form">
-                <h2>Drop us a message</h2>
+                <?php if($variable=get_field('form_title')){?>
+                    <h2><?php echo $variable?></h2>
+                <?php }?>
                 <form action="">
                     <div class="field-sets">
                         <div class="field">
@@ -71,38 +58,65 @@
         </section>
 
         <section class="contact-details">
-            <div class="details">
-                <div class="icon">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact/location.svg" alt="">
+            <?php if(have_rows('location')){while(have_rows('location')){the_row()?>
+                <div class="details">
+                    <?php if($variable=get_sub_field('icon')){?>
+                        <div class="icon">
+                            <img src="<?php echo $variable?>" alt="">
+                        </div>
+                    <?php }?>
+                    <div class="content">
+                        <?php if($variable=get_sub_field('title')){?>
+                            <h4><?php echo $variable?></h4>
+                        <?php }?>
+                        <?php if($variable=get_sub_field('address')){?>
+                            <a href="<?php if($link=get_sub_field('maplink')){?><?php echo $link?><?php }?>" target="_blank">
+                                <?php echo $variable?>
+                            </a>
+                        <?php }?>
+                    </div>
                 </div>
-                <div class="content">
-                    <h4>Location</h4>
-                    <a href="#" target="_blank">
-                        28, Canal Walk Park <br />
-                        West Industrial Estate <br />
-                        Dublin D12 YE9H
-                    </a>
+            <?php }}?>
+
+            <?php if(have_rows('phone')){while(have_rows('phone')){the_row()?>
+                <div class="details">
+                    <?php if($variable=get_sub_field('icon')){?>
+                        <div class="icon">
+                            <img src="<?php echo $variable?>" alt="">
+                        </div>
+                    <?php }?>
+                    <div class="content">
+                        <?php if($variable=get_sub_field('title')){?>
+                            <h4><?php echo $variable?></h4>
+                        <?php }?>
+                        <?php if(have_rows('add_number')){while(have_rows('add_number')){the_row()?>
+                            <?php if($variable=get_sub_field('number')){?>
+                                <a href="tel:<?php echo $variable?>"><?php echo $variable?></a>
+                            <?php }?>
+                        <?php }}?>
+                    </div>
                 </div>
-            </div>
-            <div class="details">
-                <div class="icon">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact/phone.svg" alt="">
+            <?php }}?>
+
+            <?php if(have_rows('mail')){while(have_rows('mail')){the_row()?>
+                <div class="details">
+                    <?php if($variable=get_sub_field('icon')){?>
+                        <div class="icon">
+                            <img src="<?php echo $variable?>" alt="">
+                        </div>
+                    <?php }?>
+                    <div class="content">
+                        <?php if($variable=get_sub_field('title')){?>
+                            <h4><?php echo $variable?></h4>
+                        <?php }?>
+                        <?php if(have_rows('add_mail')){while(have_rows('add_mail')){the_row()?>
+                            <?php if($variable=get_sub_field('mail')){?>
+                                <a href="mailto:<?php echo $variable?>"><?php echo $variable?></a>
+                            <?php }?>
+                        <?php }}?>
+                    </div>
                 </div>
-                <div class="content">
-                    <h4>Phone</h4>
-                    <a href="tel:01 6276270">01 6276270</a>
-                    <a href="tel:087 692 4420">087 692 4420</a>
-                </div>
-            </div>
-            <div class="details">
-                <div class="icon">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contact/email.svg" alt="">
-                </div>
-                <div class="content">
-                    <h4>Email</h4>
-                    <a href="mailto:info@thermoheatmechanical.ie">info@thermoheatmechanical.ie</a>
-                </div>
-            </div>
+            <?php }}?>
         </section>
     </div>
 </div>

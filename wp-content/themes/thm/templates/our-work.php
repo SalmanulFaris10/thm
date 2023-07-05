@@ -40,110 +40,42 @@
 
         
         <section class="works">
-            <?php if($variable=get_sub_field('second_sec_title')){?>
+            <?php if($variable=get_field('second_sec_title')){?>
                 <h2><?php echo $variable?></h2>
             <?php }?>
-            <div class="outer">
-                <a href="https://thm.hereisthedemo.com/work-detail/" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/abbvie.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>Abbvie</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/anytime-fitness.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>anytime fitness</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/energia.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>Exchange</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/georges-dock-pgim.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>Stauntons pgim</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/google-bolands-mills.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>google bolands mills</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/aib(adeladee-rid).png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>aib(Adelaide Road)</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" title="Click to know more">
-                <div class="work-box">
-                    <div class="img">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/linkedin-wilton-place.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>LinkedIn Wilton Place</h3>
-                        <p>The above was carried out in a live hospital environment.</p>
-                    </div>
+            <?php 
+                    $args = array(               
+                        'post_type' => 'our-works',
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1,
+                    );
+                    $news_post = new WP_Query( $args );
+                ?>
+            <?php if($news_post -> have_posts()){?>
+                <div class="outer">
+                    <?php while($news_post -> have_posts()){$news_post ->the_post();?>
+                        <a href="<?php echo get_the_permalink()?>" title="Click to know more">
+                            <div class="work-box">
+                                <?php if (has_post_thumbnail()) {                                      
+                                    $img_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                                    //$params = array('width' => 165);
+                                    //$img = bfi_thumb($img_url[0], $params);?>
+                                    <div class="img">
+                                        <img src="<?php echo $img_url[0]?>" alt="image">
+                                    </div>
+                                <?php }?>
+                                <!-- <div class="img">
+                                    <img src="<?php //echo get_stylesheet_directory_uri(); ?>/images/our-works/abbvie.png" alt="">
+                                </div> -->
+                                <div class="content">
+                                    <h3><?php the_title()?></h3>
+                                    <p><?php echo get_the_excerpt()?></p>
+                                </div>
+                            </div>
+                        </a>
+                    <?php }?>
                 </div>
-                </a>
-                <a href="#" title="Click to know more">
-                <div class="work-box">
-                    <div class="img">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/maynooth-uni-library.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>maynooth uni library</h3>
-                        <p>The above was carried out in a live hospital environment.</p>
-                    </div>
-                </div>
-                </a>
-                <a href="#" title="Click to know more">
-                    <div class="work-box">
-                        <div class="img">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/riot-games.png" alt="">
-                        </div>
-                        <div class="content">
-                            <h3>riot games</h3>
-                            <p>The above was carried out in a live hospital environment.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <?php }?>
         </section>
     </div>
 </div>

@@ -267,81 +267,56 @@ function theme_slug_widgets_init() {
 
 /*----------- Register Post Type ------------*/
 function theme_posttype() {
-	//faq post type
-	// $labelsfaq = array(
-	// 	'name'                  => _x( 'faq', 'Post Type General Name', 'text_domain' ),
-	// 	'singular_name'         => _x( 'faq', 'Post Type Singular Name', 'text_domain' ),
-	// 	'menu_name'             => __( 'faq', 'text_domain' ),
-	// 	'name_admin_bar'        => __( 'faq', 'text_domain' ),
-	// 	'archives'              => __( 'faq Archives', 'text_domain' ),
-	// 	'parent_item_colon'     => __( 'Parent faq:', 'text_domain' ),
-	// 	'all_items'             => __( 'All faq', 'text_domain' ),
-	// 	'add_new_item'          => __( 'Add New faq', 'text_domain' ),
-	// 	'add_new'               => __( 'Add New', 'text_domain' ),
-	// 	'new_item'              => __( 'New faq', 'text_domain' ),
-	// 	'edit_item'             => __( 'Edit faq', 'text_domain' ),
-	// 	'update_item'           => __( 'Update faq', 'text_domain' ),
-	// 	'view_item'             => __( 'View faq', 'text_domain' ),
-	// 	'search_items'          => __( 'Search faq', 'text_domain' ),
-	// 	'not_found'             => __( 'Not found', 'text_domain' ),
-	// 	'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-	// 	'featured_image'        => __( 'Featured Image', 'text_domain' ),
-	// 	'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-	// 	'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-	// 	'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-	// 	'insert_into_item'      => __( 'Insert into faq', 'text_domain' ),
-	// 	'uploaded_to_this_item' => __( 'Uploaded to this faq', 'text_domain' ),
-	// 	'items_list'            => __( 'faq list', 'text_domain' ),
-	// 	'items_list_navigation' => __( 'faq list navigation', 'text_domain' ),
-	// 	'filter_items_list'     => __( 'Filter faq list', 'text_domain' ),
-	// );
-	// $argsfaq = array(
-	// 	'label'                 => __( 'faq', 'text_domain' ),
-	// 	'labels'                => $labelsfaq,
-	// 	'supports'              => array( 'title', 'editor','excerpt', 'thumbnail', 'custom-fields', ),
-	// 	'hierarchical'          => false,
-	// 	'public'                => false,
-	// 	'show_ui'               => true,
-	// 	'show_in_menu'          => true,
-	// 	'menu_position'         => 5,
-	// 	'show_in_admin_bar'     => true,
-	// 	'show_in_nav_menus'     => true,
-	// 	'can_export'            => true,
-	// 	'has_archive'           => true,
-	// 	'exclude_from_search'   => false,
-	// 	'publicly_queryable'    => true,
-	// 	'menu_icon'				=> 'dashicons-products',
-	// 	'show_in_rest'			=> true,
-	// 	'public' 	=> true,
+	// our-work post type
+	$labelsourwork = array(
+		'name'                  => _x( 'our-work', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'our-work', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Our works', 'text_domain' ),
+		'name_admin_bar'        => __( 'our-work', 'text_domain' ),
+		'archives'              => __( 'our-work Archives', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent our-work:', 'text_domain' ),
+		'all_items'             => __( 'All our-work', 'text_domain' ),
+		'add_new_item'          => __( 'Add New our-work', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New our-work', 'text_domain' ),
+		'edit_item'             => __( 'Edit our-work', 'text_domain' ),
+		'update_item'           => __( 'Update our-work', 'text_domain' ),
+		'view_item'             => __( 'View our-work', 'text_domain' ),
+		'search_items'          => __( 'Search our-work', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into our-work', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this our-work', 'text_domain' ),
+		'items_list'            => __( 'our-work list', 'text_domain' ),
+		'items_list_navigation' => __( 'our-work list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter our-work list', 'text_domain' ),
+	);
+	$argsourwork = array(
+		'label'                 => __( 'our-work', 'text_domain' ),
+		'labels'                => $labelsourwork,
+		'supports'              => array( 'title', 'excerpt', 'thumbnail', 'custom-fields', ),
+		'hierarchical'          => false,
+		'public'                => false,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'menu_icon'				=> 'dashicons-products',
+		'show_in_rest'			=> true,
+		'public' 	=> true,
 		
-	// );
-	// register_post_type( 'faq', $argsfaq );
-	// //faq taxonomy
-	// $faqlabels = array(
-	// 	'name'              => _x( 'Category', 'taxonomy general name', 'textdomain' ),
-	// 	'singular_name'     => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
-	// 	'search_items'      => __( 'Search Category', 'textdomain' ),
-	// 	'all_items'         => __( 'All Category', 'textdomain' ),
-	// 	'parent_item'       => __( 'Parent Category', 'textdomain' ),
-	// 	'parent_item_colon' => __( 'Parent Category:', 'textdomain' ),
-	// 	'edit_item'         => __( 'Edit Category', 'textdomain' ),
-	// 	'update_item'       => __( 'Update Category', 'textdomain' ),
-	// 	'add_new_item'      => __( 'Add New Category', 'textdomain' ),
-	// 	'new_item_name'     => __( 'New Category Name', 'textdomain' ),
-	// 	'menu_name'         => __( 'Categories', 'textdomain' ),
-	// 	'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-	// );
-	// $faqargs = array(
-	// 	'hierarchical'      => true,
-	// 	'labels'            => $faqlabels,
-	// 	'supports'              => array( 'title','custom-fields','thumbnail' ),
-	// 	'show_ui'           => true,
-	// 	'show_admin_column' => true,
-	// 	'query_var'         => true,
-	// 	'show_in_rest' 		=> true,
-	// );
+	);
+	register_post_type( 'our-works', $argsourwork );
 
-	// register_taxonomy( 'faq-category', 'faq', $faqargs );
     }
 add_action('init', 'theme_posttype');
 
@@ -471,56 +446,9 @@ function bi_contactform() {
 	}
 	die();
 
-}
+}*/
 //End contact us form
 
-/************* faq ajax */
-/*add_action('wp_ajax_faq_ajax' , 'fn_faq_ajax');
-add_action('wp_ajax_nopriv_faq_ajax','fn_faq_ajax');
-function fn_faq_ajax(){
-    $term_id=$_POST['term_id'];
-	if($term_id=='all'){
-		$args=array(               
-			'post_type' => 'faq',
-			'post_status' => 'publish',
-			'posts_per_page' =>-1,
-		);
-	}else{
-    $args=array(               
-        'post_type' => 'faq',
-        'post_status' => 'publish',
-        'posts_per_page' =>-1,
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'faq-category',
-				'terms' => array($term_id),
-			)
-    ));}?>
 
-	<?php $faq = new WP_Query( $args );ob_start();?>
-	<?php if($faq -> have_posts()){?>
-		<div class="tab-outer">
-            <div class="accordion">
-				<?php while($faq -> have_posts()){$faq ->the_post();?>
-					<div class="acc-item">
-						<div class="inner-box">
-							<h5 class="accordion-toggle"><?php the_title()?><span class="arrow arrowDown"></span></h5>
-							<div class="accordion-content">
-								<?php the_content()?>
-							</div>
-						</div>
-					</div>
-				<?php }?>
-			</div>
-		</div>
-	<?php }?>
-    <?php wp_reset_postdata();?>
-	<?php $postscontent= ob_get_contents();
-   	ob_end_clean();
-	$r = array( "postscontent" => $postscontent);
- 	echo json_encode($r);
-	die();
-}
-*/
 
 ?>
