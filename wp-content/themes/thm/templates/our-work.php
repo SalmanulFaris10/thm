@@ -13,66 +13,36 @@
 	<?php
     }
 ?>
-<div class="inner_banner" style="background:url('<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/thermo-heat-our-work-banner.png') no-repeat center">
-    <div class="content">
-        <div class="top">
-            <h1>Our Work</h1>
-            <p>Our expertise spans a wide range of sectors</p>
-        </div>
-        <div class="bottom">
-            <p>Certified Company ISO 9001-2008</p>
-        </div>
-    </div>
-</div>
-<div class="bread-crumbs">
-    <div class="container">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Work</a> </li>        
-        </ul>
-    </div>
-</div>
+
 <div class="our-work-page">
     <div class="container">
+
+    <?php if(have_rows('first_sec')){?>
         <section class="first-sec">
             <div class="boxes">
-                <div class="box">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/Diligent.svg" alt="">
+                <?php while(have_rows('first_sec')){the_row()?>
+                    <div class="box">
+                        <div class="content">
+                            <?php if($variable=get_sub_field('icon')){?>
+                                <div class="icon">
+                                    <img src="<?php echo $variable?>" alt="">
+                                </div>
+                            <?php }?>
+                            <?php if($variable=get_sub_field('title')){?>
+                                <h3><?php echo $variable?></h3>
+                            <?php }?>
                         </div>
-                        <h3><span>Diligent</span>Professionals</h3>
                     </div>
-                </div>
-                <div class="box">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/Industry.svg" alt="">
-                        </div>
-                        <h3><span>Industry</span>Experts</h3>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/Client.svg" alt="">
-                        </div>
-                        <h3><span>Client</span>Focused</h3>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/our-works/Trustworthy.svg" alt="">
-                        </div>
-                        <h3><span>Trustworthy</span>Reliable</h3>
-                    </div>
-                </div>
+                <?php }?>
             </div>
         </section>
+    <?php }?>
 
+        
         <section class="works">
-            <h2>See our works</h2>
+            <?php if($variable=get_sub_field('second_sec_title')){?>
+                <h2><?php echo $variable?></h2>
+            <?php }?>
             <div class="outer">
                 <a href="https://thm.hereisthedemo.com/work-detail/" title="Click to know more">
                     <div class="work-box">
