@@ -3,6 +3,7 @@
     Template Name: Home Page
     */
     get_header();
+    wp_enqueue_script('aos');
     add_action('wp_footer','home_scripts',25);
     function home_scripts(){?>
         <script>
@@ -14,8 +15,8 @@
                     dots: true,
                     arrows: false,
                     speed:1000,
-                    autoplay: false,
-                    autoplaySpeed: 6000,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                     
                 });
                 $('.projects').slick({
@@ -48,6 +49,7 @@
                         }
                     ]
                 });
+                AOS.init();
             });
         </script>
 	<?php
@@ -63,7 +65,7 @@
                     <div class="outer">
                         <div class="content">
                         <?php if($variable=get_sub_field('title')){?>
-                            <h2>
+                            <h2 data-aos="fade-right" data-aos-duration="3000">
                                 <!-- <span class="animation-bar"></span>                  
                                 <span>We Provide Commercial</span>
                                 <span class="animation-bar"></span> 
@@ -97,7 +99,7 @@
                     <div class="content-box">
                         <div class="outer">
                             <?php if($variable=get_sub_field('title')){?>
-                                <h2><?php echo $variable?></h2>
+                                <h2 data-aos="fade-right" data-aos-duration="3000"><?php echo $variable?></h2>
                             <?php }?>
                             <div class="right">
                                 <?php if($variable=get_sub_field('description')){?>

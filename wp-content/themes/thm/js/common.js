@@ -1,9 +1,10 @@
 $(window).load(function () {
-    $(".preloader").fadeOut(function () {
-     // $(".centerLogo").addClass('show-logo');
-    });
+
     animation();
 });
+$(".preloader").fadeOut("10",function () {
+    // $(".centerLogo").addClass('show-logo');
+   });
 
 
 window.addEventListener('scroll',animation);
