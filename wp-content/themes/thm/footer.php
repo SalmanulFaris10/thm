@@ -1,63 +1,20 @@
 <div class="footer-slider">
 	<div class="container">
-		<div class="items">
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aib-logo.png" alt="">
-					</a>
-				</div>
+		<?php if(have_rows('footer_logo_slider','option')){?>
+			<div class="items">
+				<?php while(have_rows('footer_logo_slider','option')){the_row()?>
+					<div class="item">
+						<div class="img">
+							<a href="#">
+								<?php if($variable=get_sub_field('image')){?>
+									<img src="<?php echo $variable?>" alt="">
+								<?php }?>
+							</a>
+						</div>
+					</div>
+				<?php }?>
 			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Beacon-Hospital-Bold-Logo.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/carton-house.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo4.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mater-hospital.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mynoot-university.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/peamount-healthcare-logo.png" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<div class="img">
-					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mater-hospital.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
+		<?php }?>
 	</div>
 </div>
 
@@ -67,14 +24,16 @@
 	<div class="container">
 		<div class="top">
 			<div class="col1 col">
-				<div class="footer-logo">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.svg" alt="Thermo Heat">
-				</div>
-				<p>
-				ThermoHeat Mechanical is a Dublin based mechanical company that offers a 
-				complete range of plumbing, heating, ventilation and air-conditioning solutions to both
-				 commercial and domestic clients.
-				</p>
+				<?php if($variable=get_field('footer_logo','option')){?>
+					<div class="footer-logo">
+						<img src="<?php echo $variable?>" alt="Thermo Heat">
+					</div>
+				<?php }?>
+				<?php if($variable=get_field('footer_description','option')){?>
+					<p>
+					<?php echo $variable?>
+					</p>
+				<?php }?>
 			</div>
 			<div class="col2 col">
 				<h4>Quick Links</h4>
@@ -84,24 +43,42 @@
 				<h4>Services</h4>
 				<?php echo wp_nav_menu( array('theme_location'=>'footer_menu_services') ); ?>
 			</div>
-			<div class="col4 col">
-				<h4>Get In Touch</h4>
-				<div class="call">
-					<div class="num"><a href="tel:01 6276270">01 6276270</a></div>
+			<?php if(have_rows('footer_third_column','option')){while(have_rows('footer_third_column','option')){the_row()?>
+				<div class="col4 col">
+					<?php if($variable=get_sub_field('title')){?>
+						<h4><?php echo $variable?></h4>
+					<?php }?>
+					<?php if(have_rows('add_number')){?>
+						<div class="call">
+							<?php while(have_rows('add_number')){the_row()?>
+								<div class="num">
+									<a href="<?php if($variable=get_sub_field('number')){?>tel:<?php echo $variable?><?php }?>">
+										<?php if($variable=get_sub_field('number')){?><?php echo $variable?><?php }?>
+									</a>
+								</div>
+							<?php }?>
+						</div>
+					<?php }?>			
+					<div class="address">
+						<?php if($variable=get_sub_field('address')){?>
+							<p>
+							<?php echo $variable?>					
+							</p>
+						<?php }?>
+						<?php if(have_rows('add_email')){while(have_rows('add_email')){the_row()?>
+							<a href="<?php if($variable=get_sub_field('email')){?>mailto:<?php echo $variable?><?php }?>">
+								<?php if($variable=get_sub_field('email')){?><?php echo $variable?><?php }?>
+							</a>
+						<?php }}?>				
+					</div>
 				</div>
-				<div class="address">
-					<p>
-						28, Canal Walk,<br />
-						Park West Industrial Estate,<br />
-						Dublin 12<br /> 						
-					</p>
-					<a href="mailto:tom@thermoheatmechanical.ie">tom@thermoheatmechanical.ie</a>				
-				</div>
+			<?php }}?>
+		</div>
+		<?php if($variable=get_field('copy_roght_text','option')){?>
+			<div class="bottom">
+				<p><?php echo $variable?></p>
 			</div>
-		</div>
-		<div class="bottom">
-			<p>© Copyright ThermoHeat 2023. All right reserved.</p>
-		</div>
+		<?php }?>
 	</div>
 </footer>
 	<?php wp_footer(); ?>
