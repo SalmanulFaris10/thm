@@ -51,3 +51,35 @@
 	</div>
 	<?php //echo get_search_form()?>
 </header>
+
+
+<?php if(!is_front_page()){?>
+	<?php if(have_rows('banner')){while(have_rows('banner')){the_row()?>
+		<div class="inner_banner" 
+		style="background:<?php if($variable=get_sub_field('banner_image')){?>url('<?php echo $variable?>') no-repeat center<?php }?>">
+			<div class="content">
+				<div class="top">
+					<?php if($variable=get_sub_field('title')){?>
+						<h1><?php echo $variable?></h1>
+					<?php }?>
+					<?php if($variable=get_sub_field('description')){?>
+						<p><?php echo $variable?></p>
+					<?php }?>
+				</div>
+				<?php if($variable=get_sub_field('bottom_text')){?>
+					<div class="bottom">
+						<p><?php echo $variable?></p>
+					</div>
+				<?php }?>
+			</div>
+		</div>
+		<div class="bread-crumbs">
+			<div class="container">
+				<ul>
+					<li><a href="<?php echo get_home_url() ?>">Home</a></li>
+					<li><a href="javascript:void(0)"><?php echo get_the_title()?></a></li>        
+				</ul>
+			</div>
+		</div>
+	<?php }}?>
+<?php }?>
